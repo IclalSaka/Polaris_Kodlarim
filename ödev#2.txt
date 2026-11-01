@@ -1,0 +1,59 @@
+1)Kullanıcıdan ad, soyad ve şehir bilgilerini alıp bunları düzenli bir cümle halinde
+ekrana yazdıran bir kod yazın.
+
+ad = "iclal"
+soyad = "saka"
+sehir = "istanbul"
+print("Merhaba, ben {} {} Şu anda {} şehrinde yaşıyorum.".format(ad,soyad,sehir))
+
+2)Kullanıcıdan fiyatsız tutar ve indirim yüzdesi alarak indirim tutarı ile son fiyatı
+hesaplayan bir indirim_hesapla()fonksiyonu oluşturun.
+
+def indirim_hesapla():
+    fiyatsiz_tutar = 600.0
+    indirim_yuzdesi = 20.0
+    
+    indirim_tutari = fiyatsiz_tutar * indirim_yuzdesi / 100
+    son_fiyat = fiyatsiz_tutar - indirim_tutari
+    
+    print("İndirim Tutarı:", indirim_tutari, "TL")
+    print("Son Fiyat:", son_fiyat, "TL")
+
+indirim_hesapla()
+
+3)Kullanıcıdan doğum yılını alıp mevcut yıla (2026) göre yaşını hesaplayan ve ehliyet
+alıp alamayacağını belirten koşullu yapıyı kurun
+
+dogum_yili = 2007
+mevcut_yil = 2026
+
+yas = mevcut_yil - dogum_yili
+print("Yaşınız:", yas)
+
+if yas >= 18:
+    print("Ehliyet alabilirsiniz.")
+else:
+    print("Ehliyet alamazsınız.")
+
+4) Vize (%40) ve final (%60) notlarına göre ortalama ve harf notunu hesaplayan bir
+harf_notu_hesapla() fonksiyonu yazın.
+
+def harf_notu_hesapla():
+    vize = 80.0
+    final = 85.0
+    
+    ortalama = (vize * 0.4) + (final * 0.6)
+    print("Ortalamanız:", ortalama)
+    
+    if ortalama >= 90:
+        print("Harf Notunuz: AA")
+    elif ortalama >= 80:
+        print("Harf Notunuz: BB")
+    elif ortalama >= 70:
+        print("Harf Notunuz: CC")
+    elif ortalama >= 60:
+        print("Harf Notunuz: DD")
+    else:
+        print("Harf Notunuz: FF")
+
+harf_notu_hesapla()
